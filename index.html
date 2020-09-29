@@ -1,153 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HW2-1 Float</title>
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
-    <!-- documents Passport -->
-    <div>
-        <h1>HW2-1. Float</h1>
-        <!-- Link to GitHub -->
-        <p><a target="_blank" href="https://denis-dizi.github.io/Float/" title="Go to GitHub">Link</a> to this page at GitHub</p><hr>
-    </div>
-    <!-- Heat -->
-    <header class="clearfix">
-        <H1>Welcome to this webpage.</H1>
-        <div class="img-container">
-        <img src="img/img_forest.jpg" alt="Forest" style="width:100%">
-        </div>
-        <div class="img-container">
-        <img src="img/img_5terre.jpg" alt="Italy" style="width:100%">
-        </div>
-        <!-- <div class="img-container">
-            <img src="https://picsum.photos/200" alt="image from picsum">
-            </div> -->
-        <div class="img-container">
-        <img src="img/img_mountains.jpg" alt="Mountains" style="width:100%">
-        </div>
-    </header>
-    <!-- Nav -->
-    <nav></nav>
+<html>
+  <head>
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .header {
+      background-color: #2196F3;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .footer {
+      background-color: #444;
+      color: white;
+      padding: 15px;
+    }
+
+    .topmenu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #777;
+    }
+
+    .topmenu li {
+      float: left;
+    }
+
+    .topmenu li a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    .topmenu li a:hover {
+      background-color: #222;
+    }
+
+    .topmenu li a.active {
+      color: white;
+      background-color: #4CAF50;
+    }
+
+    .column {
+      float: left;
+      padding: 15px;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .sidemenu {
+      width: 25%;
+    }
+
+    .content {
+      width: 75%;
+    }
+
+    .sidemenu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sidemenu li a {
+      margin-bottom: 4px;
+      display: block;
+      padding: 8px;
+      background-color: #eee;
+      text-decoration: none;
+      color: #666;
+    }
+
+    .sidemenu li a:hover {
+      background-color: #555;
+      color: white;
+    }
+
+    .sidemenu li a.active {
+      background-color: #008CBA;
+      color: white;
+    }
+    </style>
+    <!-- Source:
+                https://www.w3schools.com/css/css_float_examples.asp
+                https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_webpage -->
+  </head>
+  
+  <body>
+
+    <ul class="topmenu">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+
     <div class="clearfix">
-        <div class="clearfix">
-            <div class="column menu">
-                <ul>
-                    <li>Earth</li>
-                    <li>Water</li>
-                    <li>Air</li>
-                    <li>Other</li>
-                </ul>
-            </div>
+      <div class="column sidemenu">
+        <ul>
+          <li><a href="#flight">The Flight</a></li>
+          <li><a href="#city" class="active">The City</a></li>
+          <li><a href="#island">The Island</a></li>
+          <li><a href="#food">The Food</a></li>
+          <li><a href="#people">The People</a></li>
+          <li><a href="#history">The History</a></li>
+          <li><a href="#oceans">The Oceans</a></li>
+        </ul>
+      </div>
+
+      <div class="column content">
+        <div class="header">
+          <h1>The City</h1>
         </div>
-    
-
-        <!-- Main Form -->
-        <div class="column content">
-            <h3>Please, login</h3>
-            <div>
-                <form action="HW1-2getform.html" target="_blank" method="GET">
-                    <input type="text" id="lname" name="lname" required placeholder="ImmanuelKant_1724">
-                    <label for="lname">Login (obligatory field)</label><br>
-                    <input type="password" id="pwd" name="pwd" required placeholder="password12345">
-                    <label for="pwd">Password (obligatory field)</label><br>
-                    <input type="submit" value="Submit">
-                    <input type="reset">
-                </form><br><hr>
-            </div>
-            <h3>or register:</h3>
-            <div>
-                <form action="HW1-2getform.html" target="_blank" method="GET">
-                    <input type="text" id="fname" name="fname" required placeholder="Marie">
-                    <label for="fname">First name (obligatory field)</label><br>
-                    <input type="text" id="sname" name="sname" placeholder="Curie">
-                    <label for="sname">Last name</label><br>
-                    <input type="password" id="pwd1" name="pwd1" placeholder="RadiumPolonium">
-                    <label for="pwd1">Password</label><br><br>
-
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label><br>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label><br>
-                    <input type="radio" id="flower" name="gender" value="flower">
-                    <label for="flower">I am a morning flower</label><br><br>
-
-                    <h4>Please, give us some info about yourself:</h4>
-                    <input type="checkbox" id="inf1" name="inf1" value="poison">
-                    <label for="inf1"> I got the poison.</label><br>
-                    <input type="checkbox" id="inf2" name="inf2" value="remedy">
-                    <label for="inf2"> I got the remedy.</label><br>
-                    <input type="checkbox" id="inf3" name="inf3" value="rhythmical remedy">
-                    <label for="inf3"> I got the pulsating rhythmical remedy.</label><br>
-                    <input type="checkbox" id="inf4" name="inf4" value="don't know">
-                    <label for="inf4"> I don't know who is Keith Flint.</label><br><br>
-
-                    <p>If You wish to get congrats on bithday:</p>
-                    <input type="date" id="birthday" name="birthday">
-                    <label for="birthday">Enter your birthday date</label><br>
-                    * May be not supported in Safari or Internet Explorer 11<br><br>
-
-                    <p>If You wish to get a newest updates and promos:</p>
-                    <input type="email" id="email" name="email" placeholder="bohemian@rhapsody.com">
-                    <label for="email">Enter your email</label><br><br>
-
-                    <p>Please, select Your favorite from <a target="_blank" href="https://en.wikipedia.org/wiki/Classical_element" title="Wiki">Classical elements</a> :</p>
-                    <select id="element" name="elmlist">
-                    <!-- <select id="element" name="elmlist" form="elmform"> -->
-                        <option value="blank">choose from list</option>
-                        <option value="earth">Earth</option>
-                        <option value="air">Air</option>
-                        <option value="fire">Fire</option>
-                        <option value="water">Water</option>
-                    </select>
-                    <label for="element">Your Classical element</label><br><br>
-
-                    <p>Please, choose Your favorite number:</p>
-                    <!-- <input type="range" id="vol" name="vol" min="0" max="10">
-                    <label for="vol">Between 0 and 10</label><br><br> -->
-                    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range -->
-                    <!-- https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
-                    <input type="range" list="tickmarks">
-                        <datalist id="tickmarks">
-                        <option value="0" label="0%"></option>
-                        <option value="10"></option>
-                        <option value="20"></option>
-                        <option value="30"></option>
-                        <option value="40"></option>
-                        <option value="50" label="50%"></option>
-                        <option value="60"></option>
-                        <option value="70"></option>
-                        <option value="80"></option>
-                        <option value="90"></option>
-                        <option value="100" label="100%"></option>
-                    </datalist>
-                    
-                    <p>Please, rate this form:</p>
-                    <input type="number" id="rating" name="rating" min="0" max="5" placeholder="5++">
-                    <label for="rating">Your rate between 0 and 5</label><br><br>
-
-                    <input type="submit" value="Submit">
-                    <input type="reset">
-                </form>           
-            </div>
-        </div><hr>
+        <h1>Chania</h1>
+        <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+        <p>You will learn more about responsive web pages in a later chapter.</p>
+      </div>
     </div>
-        
-    <!-- Other info -->
-    <footer class="clearfix" >
-        <div class="lfloated">
-            <p>Checked with <a target="_blank" href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fdenis-dizi.github.io%2FFloat%2Findex.html">validator.w3.org </a></p>
-        </div>
-        <div class="rfloated">
-            All rights reserved © 2020.
-        </div>
-        <!-- <p>Task describtion: xxxx.</p> -->
-        <!-- <p><a target="_blank" href="#">Link</a> to task describtion.</p> -->
-    </footer>
 
-</body>
+    <div class="footer">
+      <p>Footer Text</p>
+    </div>
+
+  </body>
 </html>
-
-
